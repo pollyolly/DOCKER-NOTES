@@ -36,3 +36,6 @@ Note:
 ```
 ## Append Command
 
+docker run ubuntu sleep 5 -this command will run the container and sleep for 5 seconds and then exit.
+
+docker exec "container_name" cat /etc/hosts -executing this command on running instance of container and will print the hosts fit.
