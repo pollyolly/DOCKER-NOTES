@@ -8,35 +8,19 @@ Docker container - the main docker where the web app, images (e.g. apache) are i
 
 ## Commands
 
-docker run "appname" 
+docker run "appname" -will run the instance of an app inside the docker container.
 
-  -will run the instance of an app inside the docker container.
+docker ps -show available docker containers.
 
-docker ps 
+docker ps -a -show runnning docker containers, ids, name etc..
 
-  -show available docker containers.
+docker stop "container_name" -will stop specific docker container.
 
-docker ps -a 
+docker rm "container_name" -remove completely the container.
 
-  -show runnning docker containers, ids, name etc..
+## Images
 
-docker stop "container_name" 
+docker images -show the list of installed images and their sizes.
 
-  -will stop specific docker container.
-
-docker rm "container_name" 
-
-  -remove completely the container.
-
-### Images
-
-docker images
-
-  -show the list of installed images and their sizes.
-
-docker rmi "app_name" 
-
-  -remove specific images e.g. apache etc.
-  
-  -stop and delete running container that depends on that image before deleting completely an image.
-                     - 
+docker rmi "app_name" -remove specific images e.g. apache etc. stop and delete running container that depends on that image before deleting completely an image.
+    
