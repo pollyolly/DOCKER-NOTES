@@ -39,3 +39,11 @@ Note:
 docker run ubuntu sleep 5 -this command will run the container and sleep for 5 seconds and then exit.
 
 docker exec "container_name" cat /etc/hosts -executing this command on running instance of container and will print the hosts fit.
+
+## Run -attach - detach
+
+docker run pollyolly/web-app -this command will run the docker image (pollyolly/web-app) in the FOREGROUND then simply Ctrl + C will quit the container and stop the app inside the container.
+
+docker run -d pollyolly/web-app -this command will run the docker image at the background. 
+
+docker attach "docker_id" -this command will attach you to the specific docker container.
