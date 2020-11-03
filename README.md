@@ -66,6 +66,11 @@ docker run -it pollyolly/my-script-app  -this command (-it parameter) will allow
 
 ## PORT MAPPING
 
-docker run -p 80:5000 pollyolly/web-app  -this command will map the port 80 to port 5000 (we can now read our app in port 80 while our docker container runs in port 5000).
+Docker container -where our app installed. Our container runs in 192.168.5.30 in port 5000.
+Docker host -where our containers are inside. Our host runs in 192.168.1.20 in port 80.
 
-                                         -we can now also use the ip of docker host to access our app outside. 192.168.1.20:80
+docker run -p 80:5000 pollyolly/web-app  -this command will map the port 80 to port 5000 (we can now read our app in port 80 while our docker container runs in port 5000). We can now use the IP of docker host to access our app outside. 192.168.1.20:80
+
+
+
+
