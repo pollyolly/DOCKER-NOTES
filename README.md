@@ -12,3 +12,5 @@ docker ps -a show runnning docker containers, ids, name etc..
 docker stop "docker_name" - will stop specific docker container.
 
 docker rm "docker_name" - remove completely the container.
+
+docker images - show the installed images and their sizes.
