@@ -60,4 +60,12 @@ Note:
      Docker will ignore the input and print the output even the script (.sh) asked for input.
      Docker doesn't allow interactive mode by default.
 ```
-docker run -i pollyolly/my-script-app  -this command (-i parameter) will allow the interactive mode.
+docker run -i pollyolly/my-script-app   -this command (-i parameter) will allow the interactive mode.
+
+docker run -it pollyolly/my-script-app  -this command (-it parameter) will allow the interactive and terminal mode to ask the input in the terminal.
+
+## PORT MAPPING
+
+docker run -p 80:5000 pollyolly/web-app  -this command will map the port 80 to port 5000 (we can now read our app in port 80 while our docker container runs in port 5000).
+
+                                         -we can now also use the ip of docker host to access our app outside. 192.168.1.20:80
