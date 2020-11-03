@@ -14,8 +14,16 @@ docker ps - show available docker containers.
 
 docker ps -a show runnning docker containers, ids, name etc..
 
-docker stop "docker_name" - will stop specific docker container.
+docker stop "container_name" - will stop specific docker container.
 
-docker rm "docker_name" - remove completely the container.
+docker rm "container_name" - remove completely the container.
 
-docker images - show the installed images and their sizes.
+### Images
+
+docker images - show the list of installed images and their sizes.
+
+docker rmi "app_name" - remove specific images e.g. apache etc.
+
+                      - stop and delete running container that depends on that image before deleting completely an image.
+                      
+                      - 
