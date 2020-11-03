@@ -47,3 +47,7 @@ docker run pollyolly/web-app -this command will run the docker image (pollyolly/
 docker run -d pollyolly/web-app -this command will run the docker image at the background. 
 
 docker attach "docker_id" -this command will attach you to the specific docker container.
+
+## Docker Tag 
+
+docker run apache:1.0 -this command will run the specific version of that image. If that is not provided it will run the default version which is the latest version.
