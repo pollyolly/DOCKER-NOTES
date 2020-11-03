@@ -51,3 +51,13 @@ docker attach "docker_id" -this command will attach you to the specific docker c
 ## Docker Tag 
 
 docker run apache:1.0 -this command will run the specific version of that image. If that is not provided it will run the default version which is the latest version.
+
+## RUN - STDIN (Standard Input)
+
+```
+Note:
+     Docker doesn't read standard input mode or when a script (.sh) ask for input.
+     Docker will ignore the input and print the output even the script (.sh) asked for input.
+     Docker doesn't allow interactive mode by default.
+```
+docker run -i pollyolly/my-script-app  -this command (-i parameter) will allow the interactive mode.
