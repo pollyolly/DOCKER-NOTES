@@ -26,6 +26,13 @@ docker rmi "image_name" -remove specific images e.g. apache etc. stop and delete
     
 ## Run Commands
 
-docker run "image_name" -this will run the container and if the image is not exists docker will automatically download it.
+docker run "image_name" -this will download/install the image and run the container and if the image is not exists docker will automatically download it.
 
-docker pull "image_name" -it will just download the image then install and will not run the container. Use this when we do not want to wait to download the image from docker run command.
+docker pull "image_name" -it will just download/install the image and will not run the container. Use this when we do not want to wait to download the image from docker run command.
+```
+Note:
+    A Docker container only runs when there is an active running service inside the container. e.g apache.
+    It will automatically exit when the running services stops inside the container.
+```
+## Append Command
+
