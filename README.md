@@ -86,3 +86,20 @@ docker inspect "container_name"  -this command will show the information of that
 ## Logs
 
 docker logs "container_name"   -this command will show the logs of container specially when running background.
+
+## Environment Variables
+
+docker inspect "container_name"
+```
+{
+    ...
+   "Config":{
+        "Env": {
+             "APP_COLOR=blue"
+         }
+   }
+   ...
+}
+
+```
+
