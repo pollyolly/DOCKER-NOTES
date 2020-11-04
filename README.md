@@ -148,4 +148,6 @@ COPY . /opt/source-code
 
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
-docker build Dockerfile -t pollyolly/web-app -this command will build the docker image using the "Dockerfile" config/commands.
+docker build Dockerfile -t pollyolly/web-app  -this command will build the docker image using the "Dockerfile" config/commands.
+
+docker push pollyolly/web-app  -this command will push your docker to docker hub.docker.com
