@@ -77,7 +77,7 @@ Note:
 ```
 ## VOLUME MAPPING
 
-docker run -v /opt/datadir:var/lib/mysql mysql  -this command will copy the speicified container to another location. This will help to not delete completely the container or images when we remove or stop the container.
+docker run -v /opt/datadir:var/lib/mysql mysql  -this command will copy/mount the speicified container to another location. This will help to not delete completely the container or images when we remove or stop the container.
 
 ## Inspect Container
 
