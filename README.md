@@ -116,4 +116,9 @@ docker inspect "container_name" -display the current Environment variables of do
 }
 
 ```
-
+run multiple instance to have different color in three web-app.
+```
+docker run -e APP_COLOR=blue "container_name" 
+docker run -e APP_COLOR=green "container_name" 
+docker run -e APP_COLOR=red "container_name" 
+```
