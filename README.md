@@ -122,3 +122,27 @@ docker run -e APP_COLOR=blue "container_name"
 docker run -e APP_COLOR=green "container_name" 
 docker run -e APP_COLOR=red "container_name" 
 ```
+## Creating Images
+```
+Planning steps for the instruction in Docker.
+1. OS - ubuntu
+2. Update apt repo
+3. Install dependencies using apt
+4. Install python dependencies in pip
+5. Copy source code to /opt folder
+6. Run web server using 'flask' command
+
+Setup Docker file
+
+FROM Ubuntu
+
+RUN apt-get update
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+
+COPY . /opt/source-code
+
+ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+```
