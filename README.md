@@ -151,3 +151,18 @@ ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 docker build Dockerfile -t pollyolly/web-app  -this command will build the docker image using the "Dockerfile" config/commands.
 
 docker push pollyolly/web-app  -this command will push your docker to docker hub.docker.com
+
+```
+-----
+FROM Ubuntu                   -start from the base os
+-----
+RUN apt-get update            -install dependencies
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+-----
+COPY . /opt/source-code       -copy the source code in opt/source-code folder inside the docker image.
+-----
+ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run         -this will specify a command that will be run when the image run as a container.
+```
