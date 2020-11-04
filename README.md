@@ -167,3 +167,15 @@ COPY . /opt/source-code       -copy the source code in opt/source-code folder in
 -----
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run         -this will specify a command that will be run when the image run as a container.
 ```
+## Failure 
+```
+Layer 1. OS - ubuntu
+Layer 2. Update apt repo
+Layer 3. Install dependencies using apt                    -IF THIS LAYER FAILED <read below>
+Layer 4. Install python dependencies in pip
+Layer 5. Copy source code to /opt folder
+Layer 6. Run web server using 'flask' command
+
+If failure occured by re-running using the command "docker build Dockerfile -t pollyolly/web-app" will re-use the previous cached steps and continue to the remaining layers.
+````
+    
