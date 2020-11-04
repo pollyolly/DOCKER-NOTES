@@ -88,8 +88,22 @@ docker inspect "container_name"  -this command will show the information of that
 docker logs "container_name"   -this command will show the logs of container specially when running background.
 
 ## Environment Variables
+-use this to add configurable variable inside your app.
+```
+app.py
 
-docker inspect "container_name"
+import os
+
+color = os.environment.get('APP_COLOR')
+print color
+```
+export APP_COLOR=blue; python app.py  -this command will set the environment variable (env) of the script in the docker.
+
+docker run "container_name"  -check the web-app if env take effect.
+
+docker run -e APP_COLOR=blue "container_name"  -this command will set the environment variable (env) of the script in the docker while running.
+
+docker inspect "container_name" -display the current Environment variables of docker.
 ```
 {
     ...
