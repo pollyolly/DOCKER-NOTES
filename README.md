@@ -131,10 +131,11 @@ Planning steps for the instruction in Docker.
 4. Install python dependencies in pip
 5. Copy source code to /opt folder
 6. Run web server using 'flask' command
-
+```
 Setup Docker file
-Filename: Dockerfile
 
+Filename: Dockerfile
+```
 FROM Ubuntu
 
 RUN apt-get update
@@ -147,3 +148,4 @@ COPY . /opt/source-code
 
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
+docker build Dockerfile -t pollyolly/web-app -this command will build the docker image using the "Dockerfile" config/commands.
