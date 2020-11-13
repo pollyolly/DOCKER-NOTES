@@ -3,7 +3,10 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 
 
 
-Install Updated WSL 2 for x64.
+
+```
+Install Update for WSL 2 for x64.
+```
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
 Force Removing Docker Installation
