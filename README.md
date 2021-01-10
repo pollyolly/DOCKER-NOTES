@@ -157,7 +157,8 @@ docker images -shows the list of created images
 ## Creating Containers
 ```
 docker images
-docker run -tid --name="name_of_container" repository:tag    
+docker run -d dockerized_app:latest  -this will create the container for the image dockerized_app:latest
+docker run -tid --name="name_of_container" dockerized_app:latest  -this will re-create and rename the container
 ```
 List available images and create the container then replace dockerized_app:latest(repository:tag) selected on the images list.
 
