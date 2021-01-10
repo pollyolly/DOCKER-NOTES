@@ -31,3 +31,14 @@ WORKDIR /root
 
 CMD ["bash"]
 ```
+Inside dockerized_app in commandline type: docker build -t dockerized_app . (this will create the image for dockerized_app) 
+
+File: dockerized_app/Dockerfile
+```
+#Dockerfile
+FROM php:7.4-apache
+COPY . var/www/html/dockerized_app
+WORKDIR var/www/html/dockerized_app
+EXPOSE 8002
+CMD ["php", "index.php"]
+```
