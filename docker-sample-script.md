@@ -31,7 +31,7 @@ WORKDIR /root
 
 CMD ["bash"]
 ```
-Inside dockerized_app in commandline type: docker build -t dockerized_app . (this will create the image for dockerized_app) 
+Inside dockerized_app folder in commandline type: docker build -t dockerized_app . (this will create the image for dockerized_app) 
 
 File: dockerized_app/Dockerfile
 ```
