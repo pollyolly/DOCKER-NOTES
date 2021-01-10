@@ -152,6 +152,8 @@ docker build Dockerfile -t pollyolly/web-app  -this command will build the docke
 
 docker push pollyolly/web-app  -this command will push your docker to docker hub.docker.com
 
+docker images -shows the list of created images
+
 ## Layered Architecture
 ```
 -----
