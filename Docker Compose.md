@@ -1,6 +1,6 @@
 ### Docker Compose
 
-docker-compose 
+$docker-compose up -d
 ```
 #docker-compose.yml
 version: '3.3'                                                                                                                                                                                                                             
