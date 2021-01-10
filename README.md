@@ -154,6 +154,14 @@ docker push pollyolly/web-app  -this command will push your docker to docker hub
 
 docker images -shows the list of created images
 
+## Creating Containers
+```
+docker images
+docker run -tid --name="name_of_container" repository:tag    
+
+List available images and create the container then replace dockerized_app:latest(repository:tag) selected on the images list.
+```
+
 ## Layered Architecture
 ```
 -----
