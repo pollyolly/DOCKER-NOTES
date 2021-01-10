@@ -10,9 +10,9 @@ Docker container -the main docker where the web app, images (e.g. apache) are in
 
 docker run "image_name" -will run the instance of an app inside the docker container.
 
-docker ps -show available docker containers.
+docker ps -show runnning docker containers, ids, name etc..
 
-docker ps -a -show runnning docker containers, ids, name etc..
+docker ps -a -show available docker containers.
 
 docker stop "container_name" -will stop specific docker container.
 
