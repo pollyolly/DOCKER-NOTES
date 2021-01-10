@@ -47,6 +47,6 @@ networks:
 ```
 #.env
 MYSQL_USER=root
-MYSQL_PASSWORD=!!++labsMYSQL--##
+MYSQL_PASSWORD=!mysqlPassword#
 MYSQL_DB_NAME=docker_wordpress
 ```
