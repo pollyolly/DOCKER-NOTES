@@ -158,9 +158,8 @@ docker images -shows the list of created images
 ```
 docker images
 docker run -tid --name="name_of_container" repository:tag    
-
-List available images and create the container then replace dockerized_app:latest(repository:tag) selected on the images list.
 ```
+List available images and create the container then replace dockerized_app:latest(repository:tag) selected on the images list.
 
 ## Layered Architecture
 ```
