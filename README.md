@@ -18,6 +18,8 @@ docker stop "container_name" -will stop specific docker container.
 
 docker rm "container_name" -remove completely the container.
 
+docker exec -it cc3ed4c1304a /bin/bash   -access container inside docker.
+
 ## Images
 
 docker images -show the list of installed images and their sizes.
