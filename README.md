@@ -26,13 +26,15 @@ docker exec -it cc3ed4c1304a /bin/bash   -access container inside docker.
 ```vim
 docker images -show the list of installed images and their sizes.
 
-docker rmi "image_name" -remove specific images e.g. apache etc. stop and delete running container that depends on that image before deleting completely an image.
+docker rmi "image_name" -remove specific images e.g. apache etc. stop and delete running container
+                         that depends on that image before deleting completely an image.
 ```    
 ## Run Commands
 ```vim
 docker run "image_name" -this will download/install the image and run the container and if the image is not exists docker will automatically download it.
 
-docker pull "image_name" -it will just download/install the image and will not run the container. Use this when we do not want to wait to download the image from docker run command.
+docker pull "image_name" -it will just download/install the image and will not run the container.
+                          Use this when we do not want to wait to download the image from docker run command.
 ```
 ```
 Note:
@@ -47,47 +49,53 @@ docker exec "container_name" cat /etc/hosts -executing this command on running i
 ```
 ## Run -attach - detach
 ```vim
-docker run pollyolly/web-app -this command will run the docker image (pollyolly/web-app) in the FOREGROUND then simply Ctrl + C will quit the container and stop the app inside the container.
+docker run pollyolly/web-app -this command will run the docker image (pollyolly/web-app) in the
+                              FOREGROUND then simply Ctrl + C will quit the container and stop the app inside the container.
 
 docker run -d pollyolly/web-app -this command will run the docker image at the background. 
 
 docker attach "docker_id" -this command will attach you to the specific docker container.
 ```
 ## Docker Tag 
-
-docker run apache:1.0 -this command will run the specific version of that image. If that is not provided it will run the default version which is the latest version.
-
+```
+docker run apache:1.0 -this command will run the specific version of that image.
+                       If that is not provided it will run the default version which is the latest version.
+```
 ## RUN - STDIN (Standard Input)
 
-```
+```vim
 Note:
      Docker doesn't read standard input mode or when a script (.sh) ask for input.
      Docker will ignore the input and print the output even the script (.sh) asked for input.
      Docker doesn't allow interactive mode by default.
 ```
+```vim
 docker run -i pollyolly/my-script-app   -this command (-i parameter) will allow the interactive mode.
 
 docker run -it pollyolly/my-script-app  -this command (-it parameter) will allow the interactive and terminal mode to ask the input in the terminal.
-
+```
 ## PORT MAPPING
-
+```vim
 Docker container -where our app installed. Our container runs in 192.168.5.30 in port 5000.
 Docker host -where our containers are inside. Our host runs in 192.168.1.20 in port 80.
 
-docker run -p 80:5000 pollyolly/web-app  -this command will map the port 80 to port 5000 (we can now read our app in port 80 while our docker container runs in port 5000). We can now use the IP of docker host to access our app outside. 192.168.1.20:80
+docker run -p 80:5000 pollyolly/web-app  -this command will map the port 80 to port 5000 (we can now read our app in port 80 while our docker container runs in port 5000). 
+                                          We can now use the IP of docker host to access our app outside. 192.168.1.20:80
+```
 ```
 Note:
      You cannot run on the same port with docker host. e.g. docker run -p 3360:3360.
      You can have multiple have running in different ports.
 ```
 ## VOLUME MAPPING
-
-docker run -v /opt/datadir:var/lib/mysql mysql  -this command will copy/mount the speicified container to another location. This will help to not delete completely the container or images when we remove or stop the container.
-
+```vim
+docker run -v /opt/datadir:var/lib/mysql mysql  -this command will copy/mount the speicified container to another location. 
+                                                 This will help to not delete completely the container or images when we remove or stop the container.
+```
 ## Inspect Container
-
+```vim
 docker inspect "container_name"  -this command will show the information of that container.
-
+```
 ## Logs
 
 docker logs "container_name"   -this command will show the logs of container specially when running background.
