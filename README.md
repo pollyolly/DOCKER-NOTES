@@ -97,12 +97,12 @@ docker run -v /opt/datadir:var/lib/mysql mysql  -this command will copy/mount th
 docker inspect "container_name"  -this command will show the information of that container.
 ```
 ## Logs
-
+```vim
 docker logs "container_name"   -this command will show the logs of container specially when running background.
-
+```
 ## Environment Variables
 -use this to add configurable variable inside your app.
-```
+```python
 app.py
 
 import os
@@ -110,6 +110,7 @@ import os
 color = os.environment.get('APP_COLOR')
 print color
 ```
+```vim
 export APP_COLOR=blue; python app.py  -this command will set the environment variable (env) of the script in the docker.
 
 docker run "container_name"  -check the web-app if env take effect.
@@ -118,6 +119,7 @@ docker run -e APP_COLOR=blue "container_name"  -this command will set the enviro
 
 docker inspect "container_name" -display the current Environment variables of docker.
 ```
+```json
 {
     ...
    "Config":{
@@ -130,13 +132,13 @@ docker inspect "container_name" -display the current Environment variables of do
 
 ```
 run multiple instance to have different color in three web-app.
-```
+```vim
 docker run -e APP_COLOR=blue "container_name" 
 docker run -e APP_COLOR=green "container_name" 
 docker run -e APP_COLOR=red "container_name" 
 ```
 ## Creating Images
-```
+```vim
 Planning steps for the instruction in Docker.
 1. OS - ubuntu
 2. Update apt repo
@@ -148,7 +150,7 @@ Planning steps for the instruction in Docker.
 Setup Docker file
 
 Filename: Dockerfile
-```
+```vim
 FROM Ubuntu
 
 RUN apt-get update
@@ -161,14 +163,15 @@ COPY . /opt/source-code
 
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
+```vim
 docker build Dockerfile -t pollyolly/web-app  -this command will build the docker image using the "Dockerfile" config/commands.
 
 docker push pollyolly/web-app  -this command will push your docker to docker hub.docker.com
 
 docker images -shows the list of created images
-
-## Creating Containers
 ```
+## Creating Containers
+```vim
 docker images
 docker run -d dockerized_app:latest  -this will create the container for the image dockerized_app:latest
 docker run -tid --name="name_of_container" dockerized_app:latest  -this will re-create and rename the container
@@ -176,7 +179,7 @@ docker run -tid --name="name_of_container" dockerized_app:latest  -this will re-
 List available images and create the container then replace dockerized_app:latest(repository:tag) selected on the images list.
 
 ## Layered Architecture
-```
+```vim
 -----
 FROM Ubuntu                   -start from the base os
 -----
