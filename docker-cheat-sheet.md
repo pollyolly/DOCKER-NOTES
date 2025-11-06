@@ -1,5 +1,5 @@
 ### Docker Images
-```
+```bash
 #build image
 $cd http-server/
 $docker build -t image-name .
@@ -15,7 +15,7 @@ $docker rmi http-server:v1
 $docker push http-server:latest
 ```
 ### Docker Container
-```
+```bash
 #deploy image to container 
 #-d DETACH run container in background 
 #-p publish PORT mapping
@@ -33,7 +33,7 @@ $docker exec -it container-id bash
 $docker rm container-id
 ```
 ### Docker Volume
-```
+```bash
 #list docker volume
 $docker volume ls
 #create volume
@@ -54,7 +54,7 @@ $docker cp crazy_mahavira:/http-server/uploads/test.txt /path/external
 $docker run --name http-server-container -dp 9000:4000 -v ./uploads:/external/uploads http-server
 ```
 ### Dockerfile
-```
+```bash
 FROM -> base image image_name:tag 
      -> FROM node:latest
 WORKDIR -> Work directory for commands (RUN, CMD, ENTRYPOINT, COPY, ADD)
@@ -74,7 +74,7 @@ ENV -> APP_URL=http://localhost:8080
 EXPOSE 8080 -> expose port 8080 to public
 ```
 ### Creating Network (Bridge)
-```
+```bash
 #list network
 $docker network ls
 #check network config
@@ -89,7 +89,7 @@ $apt-get install iputils-ping
 $ping container-name
 ```
 ### Docker Compose
-```
+```bash
 # docker-compose.yml
 services:
   web:
@@ -164,7 +164,7 @@ networks:
   http-server-network:
 ```
 ### Docker Compose Command
-```
+```bash
 #run docker compose in background
 docker compose up -d
 #build image first
